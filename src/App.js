@@ -18,10 +18,6 @@ class App extends Component {
   });
   };
 
- 
-      
- 
-  
 
   
   render() {
@@ -40,7 +36,9 @@ class App extends Component {
             <h2>{country.name.common} </h2>
             <p>{country.capital}</p>
             <p>Population: {country.population.toLocaleString()}</p>
-            <p>Borders with: <span></span></p>
+            <p>TimeZone: </p>
+            <p>Region: {country.region}</p>
+            <p>Borders with: <span>{}</span></p>
           </div>
         )
       }
