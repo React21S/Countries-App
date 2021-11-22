@@ -1,0 +1,73 @@
+
+.overlay button{
+  background-color: var(--bg-color-1);
+  color:var(--white);
+  border: none;
+  border-radius: 5px;
+  padding:0.6rem;
+  margin:0 auto;
+  font-size: 30px;
+  top: 3px;
+  right: 10px;
+  position: absolute;
+  text-align: center;   
+}
+
+.popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-color-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
+  
+.overlay{
+  background-color: var(--bg-color-3);
+  color:var(--black);
+  padding: 20px;
+  width:40%;
+  height: 40%;
+  position: relative;
+  top:0;
+  left:0;
+  border-radius: 10px;
+} 
+  
+
+/* ------############# mobile #############-----------*/
+
+
+@media (max-width: 414px) {
+  .overlay{
+  padding: 20px;
+  width:50%;
+  height: 40%;
+  }
+
+  .overlay button{
+    padding:0.6rem;
+    font-size: 10px;
+    top: 3px;
+    right: 10px; 
+  }
+}
+
+/* ------############# Ipad Pro #############-----------*/
+@media  screen and (min-width: 540px) and (max-width: 768px) {
+  .overlay{
+    padding: 10px;
+    width:50%;
+    height: 40%;
+    }
+  
+    .overlay button{
+      padding:0.6rem;
+      font-size: 10px;
+      top: 3px;
+      right: 10px; 
+    }
+}
