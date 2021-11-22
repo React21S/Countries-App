@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "./styles/App.css";
+import "./styles/card.css";
 import App from './App';
 
 

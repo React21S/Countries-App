@@ -102,10 +102,7 @@ body{
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--ml-4);
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
   text-align: center;
- 
 }
 
 
@@ -125,16 +122,15 @@ button {
 
 }
 
-h1, p{
-  padding: 1.5rem;
-  font-family: var(--font-3);
-}
 h1{
   font-size: 3rem;
 }
 
-p{
+h2{
   font-size: 3rem;
+}
+p{
+  font-size: 2rem;
 }
 
 /* ####### Header ###### */
@@ -152,12 +148,10 @@ header{
 
 /* ####### Footer ###### */
 footer{
-  font-family: var(--font-2);
-  width: 100%;
-  position: absolute;
-  bottom: 0;
   text-align: center;
-  color: var(--black);
+  width: 100%;
+  bottom: 0;
+  margin: 0 auto;
   background-color: var(--ml-2);
 }
 
@@ -170,9 +164,10 @@ footer p{
 
 
 
+
 /* ------############# Mobile size iphone 5/SE #############-----------*/
 
-@media (max-width: 321px){
+/* @media (max-width: 321px){
   header{
     padding: 20px;
     width: 100%;
@@ -196,10 +191,10 @@ footer p{
     padding: 0.3rem 0.5rem;
     margin: 10px;
   }
-}
+} */
 
 /* ------############# Ipad #############-----------*/
-@media  (max-width: 768px) {
+/* @media  (max-width: 768px) {
   h1{
     padding: 15px;
     font-size: .8rem;
@@ -218,5 +213,5 @@ footer p{
     width: 100%;
   }
 
-}
+} */
 

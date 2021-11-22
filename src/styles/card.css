@@ -1,0 +1,31 @@
+
+
+
+img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: right;
+}   
+  
+.country{
+    margin: 20px;
+    box-shadow: 0 3px 8px 7px var(--white-2), 0 6px 20px 0 ;
+    width: 400px;
+    border-radius: 5px;
+} 
+
+.country p, .country h2 {
+    padding-top: 40px;
+    
+}
+  
+.countries{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 1rem;
+    margin: 0;
+    text-transform: capitalize;
+}
+
