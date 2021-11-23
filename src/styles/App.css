@@ -102,6 +102,7 @@ body{
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--ml-4);
   background-repeat: no-repeat;
+  position: relative;
 }
 
 h1{
@@ -127,13 +128,30 @@ header{
   font-family: var(--font-2);
 }
 
+/* ######### head link ############# */
+ul li{
+  list-style-type: none;
+  display: inline-block;
+  margin: 20px;
+  font-size: 40px;
+}
+
+a{
+  color: var(--rd-4);
+  text-decoration: none;
+
+}
+
+.active{
+  color:#edf3f0;
+}
 
 /* ####### Footer ###### */
 footer{
   text-align: center;
   width: 100%;
   bottom: 0;
-  margin: 0 auto;
+  padding: 1rem;;
   background-color: var(--ml-2);
 }
 
@@ -144,7 +162,10 @@ footer p{
   padding: 30px;
 }
 
-
+.footerWrapper{
+ 
+ 
+}
 
 /* ####### Button ###### */
 button {
