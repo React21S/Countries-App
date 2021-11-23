@@ -39,7 +39,15 @@ class App extends Component {
       <Header/>
        <div className="countries">
          <div className="search">
-         <label><input type="text" name="search" onChange={this.searchHandler} placeholder="Insert the name of the country here"/></label> 
+         <label><input type="text" name="search" onChange={this.searchHandler} placeholder="Insert the name of the country here"/></label>
+
+      {/* for searching  */}
+      <select  onChange={this.searchHandler}>
+        {this.state.data.map(info=>( <option value ={info.name}>{info.name}</option>))}
+       
+      </select>
+ {/* for searching  */}
+
          </div>
       { // Filter start here for each country 
         this.state.data.filter(

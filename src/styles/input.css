@@ -1,14 +1,14 @@
 /* ####### Input ####### */
-input
+input, select
 {
   padding: 20px;
   border-radius: 10px;
   outline: none;
   font-size: 20px;
   width: 60%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-2);
   border-width: 10px;
-  border-color:var(--ml-5);
+  border-color:var(--ml-2);
   margin: 0 50px;
 
 }
@@ -22,4 +22,11 @@ label {
 .search{
   text-align: center;
   width: 100vw;
+}
+
+
+
+select
+{
+    width: 30%;
 }
