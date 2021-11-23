@@ -1,4 +1,4 @@
-/* ### For Card styling ###  */
+/* ### Card styling Area ###  */
 img{
     width: 50px;
     height: 50px;
@@ -9,9 +9,8 @@ img{
 .country{
     margin: 20px;
     box-shadow: 0 3px 8px 7px var(--white-2), 0 6px 20px 0 ;
-    width: 400px;
+    width: 500px;
     border-radius: 5px;
-    
 } 
 
 .country p, .country h2 { 
@@ -28,6 +27,16 @@ img{
     justify-content: center;
     padding: 1rem 1rem;
     margin: 0;
-    text-transform: capitalize;
 }
 
+.top{
+    background-color:var(--ml-1);
+}
+span{
+    font-weight:bolder;
+    margin-right: 1rem;
+}
+
+.lang, .border{
+   font-size: 20px;
+}
