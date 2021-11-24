@@ -41,6 +41,7 @@ class CountriesList extends Component {
     
         {/* for searching  */}
           <select  onChange={this.searchHandler}>
+            <option>  --- select country ---</option>
             {this.state.data.map(info=>( <option key={info.name} value ={info.name}>{info.name}</option>))}
           </select>
         {/* for searching  */}
@@ -58,7 +59,7 @@ class CountriesList extends Component {
             (country=> 
               <div className="country" key = {country.name} >
             
-               <div className="top">
+               <div className="cardTop">
                   <img src={country.flags.png} alt="country flag"/>
                   <h2>{country.name} </h2>
                   <p>{country.capital}</p>
