@@ -14,6 +14,10 @@ class Clock extends Component {
     getTime(){
         let now = new Date(); 
         return {
+            day: now.getDate(),
+            month: now.getUTCMonth() + 1,
+          
+            year: now.getFullYear(),
               hours: now.getHours(),
               minutes: now.getMinutes(),
               seconds: now.getSeconds(),
@@ -24,10 +28,14 @@ class Clock extends Component {
         return (
             <div>
               <p>  UTC +2 Time Zone</p>
-                 {this.state.hours} {' : '}
+              {this.state.day} {' - '}
+              {this.state.month} {' - '}
+              {this.state.year} {'  '}
+
+                ( {this.state.hours} {' : '}
                  {this.state.minutes} {' : '}
                  {this.state.seconds}{' . '}
-                 {this.state.tenths}
+                 {this.state.tenths})
             </div>
         );
     }
