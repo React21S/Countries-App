@@ -3,9 +3,6 @@ import axios from "axios";
 import React, { Component } from 'react';
 import number from "easy-number-formatter"
 
-
-
-
 class CountriesList extends Component {
    
     state ={
@@ -13,7 +10,8 @@ class CountriesList extends Component {
         searchInput:"",
         isLoading: true,
      };
-    
+
+     
       componentDidMount(){
         axios.get('https://restcountries.com/v2/all?fields=name,capital,currencies,population,flags,region,languages,borders').then((res) => {this.setState({data: res.data, isLoading:false})
         console.log(this.state.data);
@@ -77,6 +75,8 @@ class CountriesList extends Component {
                     <p>
                         Borders with: {country.borders.map((border, i)=>(<span className="border" key={i}>{border}</span>))}
                     </p>
+
+
               </div>
             )
           }

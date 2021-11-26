@@ -1,12 +1,14 @@
 import React from 'react';
 import number from "easy-number-formatter"
 
-const countriesCard = (country) => {
+const CountriesCard = (country) => {
 
     return (
         <div>
-            <div className="country" key = {country.name} >
-               <div className="top">
+           
+             
+            
+               <div className="cardTop">
                   <img src={country.flags.png} alt="country flag"/>
                   <h2>{country.name} </h2>
                   <p>{country.capital}</p>
@@ -24,9 +26,10 @@ const countriesCard = (country) => {
                     <p>
                         Borders with: {country.borders.map((border, i)=>(<span className="border" key={i}>{border}</span>))}
                     </p>
-              </div>
+            
+            
         </div>
     );
 };
 
-export default countriesCard;
+export default CountriesCard;

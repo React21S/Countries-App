@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from './Nav';
+import Clock from "./Clock";
 
 const Header = () => {
     return (
@@ -7,6 +8,7 @@ const Header = () => {
             <header> 
                 <h1>List of Countries </h1>
                 <Nav/>
+                <Clock/>
             </header>
             
         </div>
