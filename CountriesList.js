@@ -34,7 +34,7 @@ class CountriesList extends Component {
       if (!this.state.isLoading){
         return (
         <div>
-       
+          <CountrySingle/>
            <div className="countries">
              <div className="search">
              <label><input type="text" name="search" onChange={this.searchHandler} placeholder="Insert the name of the country here"/></label>
@@ -54,8 +54,32 @@ class CountriesList extends Component {
                     {return country.name.toLowerCase().includes
                     (this.state.searchInput.toLowerCase())}) 
             // end
+
             .map
-            (country=> (<CountriesCard {...country} key={country.name}/>)
+            (country=> <CountriesCard/>
+              // <div className="country" key = {country.name} >
+            
+              //  <div className="cardTop">
+              //     <img src={country.flags.png} alt="country flag"/>
+              //     <h2>{country.name} </h2>
+              //     <p>{country.capital}</p>
+              // </div>
+              //       <p>
+              //           Language(s): {country.languages.map((lang, i)=>(<span className="lang" key={i}>{(lang.name)}</span>))}
+              //       </p>
+              //       <p>
+              //           Population: <span>{number.formatNumber(country.population)}</span>
+              //       </p>
+              //       <p>
+              //           Currencies: {country.currencies.map((cur, i)=>(<span key={i}>{cur.name} - {cur.symbol}</span>))}
+              //       </p>
+              //       <p>Region: <span>{country.region}</span></p>
+              //       <p>
+              //           Borders with: {country.borders.map((border, i)=>(<span className="border" key={i}>{border}</span>))}
+              //       </p>
+
+
+              // </div>
             )
           }
           </div> 
@@ -64,6 +88,7 @@ class CountriesList extends Component {
       }
       }
     }
+
 
 
 export default CountriesList;
