@@ -6,19 +6,20 @@
     float: right;
 }   
   
-.country{
+ .country{
     margin: 20px;
     box-shadow: 0 3px 8px 7px var(--white-2), 0 6px 20px 0 ;
     width: 500px;
     border-radius: 5px;
 } 
 
-.country p, .country h2 { 
+a .country p, a .country h2 { 
     margin-left: 20px;
     padding:10px ;
+    color: var(--black);
 }
   
-.country h2{
+a .country h2{
     padding-top: 50px;
 }
 .countries{

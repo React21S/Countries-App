@@ -1,10 +1,11 @@
 import React from 'react';
-import number from "easy-number-formatter"
+import number from "easy-number-formatter";
+import {Link} from "react-router-dom"
 
 const CountriesCard = (props) => {
     const{name, capital, languages, population, borders, currencies, flags, region} = props
     return (
-        <div>
+        <Link to={capital}>
            
            <div className="country" key = {name} >
             
@@ -31,7 +32,7 @@ const CountriesCard = (props) => {
            </div>
             
             
-        </div>
+        </Link>
     );
 };
 

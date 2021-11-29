@@ -2,7 +2,7 @@
 import axios from "axios";
 import React, { Component } from 'react';
 import CountriesCard from "./CountriesCard";
-import CountrySingle from "./CountrySingle";
+
 
 class CountriesList extends Component {
    
