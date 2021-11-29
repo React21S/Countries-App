@@ -8,10 +8,10 @@ const Nav = () => {
    <nav>     
 <ul>
   <li>
-    <NavLink className="active"  to="/" > Home </NavLink> 
+    <NavLink className={(navData) => navData.isActive ? "active" : "" } to="/" > Home </NavLink> 
     </li>
   <li>
-    <NavLink className="active"  to="/countries"> Countries</NavLink> 
+    <NavLink className={(navData) => navData.isActive ? "active" : "" }  to="/countries"> Countries</NavLink> 
     </li>
 
   

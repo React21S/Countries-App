@@ -140,9 +140,11 @@ a{
 
 }
 
-a:active{
+.active{
   color: var(--white);
 }
+
+
 
 /* ####### Footer ###### */
 footer{
