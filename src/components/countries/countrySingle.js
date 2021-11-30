@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import number from "easy-number-formatter";
 
 
 
@@ -9,26 +9,23 @@ function getCountry(capital) {
   }
   
   function getWeather(capital) {
-    return axios.get('http://api.weatherstack.com/current', {
-        params:{
-           access_key: process.env.REACT_APP_API_WEATHER_KEY,
-            query:capital
-    
-        },
-    });
-    // process.env.REACT_APP_API_WEATHER_KEY
-  }
+    return axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${capital}&units=metric&appid=${process.env.REACT_APP_OPENWEATHER_KEY}`);
+        
+    };
+  
+  
 class CountrySingle extends Component {
 state={
-    country:[],
-    weather:[],
+    country:{},
+    weather:{},
+    isLoading: true,
 }
 componentDidMount(){
     Promise.all([
         getCountry(this.props.params.name), 
         getWeather(this.props.params.name)
     ]).then((res) => {
-    this.setState ({country:res[0].data[0], weather:res[1].data});
+    this.setState ({country:res[0].data[0], weather:res[1].data, isLoading: false,});
     console.log("country", this.state.country)
     console.log("weather", this.state.weather)
   });
@@ -36,19 +33,45 @@ componentDidMount(){
 }
 
     render() {
-
-              
+        if(this.state.isLoading){
+            return <div className="lds-dual-ring"></div>
+          }
+        
+         if (!this.state.isLoading){
+          
+            // {this.state.weather.main.temp}
         return (
             <div className="CountrySingle">
-                {this.props.params.name}
-              
-                {/* {this.state.country}
-                {this.state.weather} */}
-         
-                
+                <p> Weather situation in <span className="city">{this.props.params.name}</span>now is {" "}
+                 °C</p>
+                {/* <img src={`http://openweathermap.org/img/wn/${this.state.weather.weather[0].icon}@2x.png`} alt={this.state.weather.weather[0].description}/> */}
                
+              
+                <div className="country" key = {this.state.country.name} >
+            
+                    <div className="cardTop">
+                    
+                        <img src={this.state.country.flags.png} alt="country flag"/>
+                        <h2>{this.state.country.name} </h2>
+                        <p>{this.state.country.capital}</p>
+                    </div>
+                    <p>
+                     Language(s): {this.state.country.languages.map((lang, i)=>(<span className="lang" key={i}>{(lang.name)}</span>))}
+                 </p>
+                 <p>
+                     Population: <span>{number.formatNumber(this.state.country.population)}</span>
+                 </p>
+                 <p>
+                     Currencies: {this.state.country.currencies.map((cur, i)=>(<span key={i}>{cur.name} - {cur.symbol}</span>))}
+                 </p>
+                 <p>Region: <span>{this.state.country.region}</span></p>
+                 {/* <p>
+                     Borders with: {this.state.country.borders.map((border, i)=>(<span className="border" key={i}>{border}</span>))}
+                 </p> */}
+                </div>         
             </div>
         );
+            }
     }
 }
 

@@ -1,9 +1,27 @@
-
-
 .CountrySingle{
     padding: 30px;
-    min-height: 65vh;
-    text-align: center;
-    font-weight: bolder;
     font-size: 30px;
+    min-height: 65vh;
+    margin: 20px auto;
+    width: 600px;
+    text-align: center;
 }
+
+
+
+.CountrySingle .city{
+   color: var(--yellow-6) ;
+    
+}
+
+.CountrySingle .country p, .CountrySingle .country h2 { 
+    margin-left: 20px;
+    padding:10px ;
+}
+
+.CountrySingle .country{
+    text-align: start;
+    justify-content: center;
+    align-items: center;
+} 
+
