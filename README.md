@@ -21,3 +21,7 @@
 
 ![Search-by-option-screenshot](/img/Result.png)
 
+---
+### Single country details
+-   When the user clicks on each country card, it displays the weather condition of the capital. 
+![Search-by-option-screenshot](/img/singleCountry.png)
