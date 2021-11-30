@@ -3,7 +3,6 @@ import axios from 'axios';
 import number from "easy-number-formatter";
 
 
-
 function getCountry(capital) {
     return axios.get(`https://restcountries.com/v2/capital/${capital}`);
   }
@@ -38,13 +37,20 @@ componentDidMount(){
           }
         
          if (!this.state.isLoading){
-          
-            // {this.state.weather.main.temp}
+
         return (
             <div className="CountrySingle">
-                <p> Weather situation in <span className="city">{this.props.params.name}</span>now is {" "}
-                 °C</p>
-                {/* <img src={`http://openweathermap.org/img/wn/${this.state.weather.weather[0].icon}@2x.png`} alt={this.state.weather.weather[0].description}/> */}
+                <p> 
+                    Weather situation now in {" "}
+                    <span className="city">{this.props.params.name}</span>
+                   is {" "}{this.state.weather.main.temp} °C 
+                </p>
+               
+                <img    src={`http://openweathermap.org/img/wn/${this.state.weather.weather[0].icon}@2x.png`} 
+                        alt={this.state.weather.weather[0].description}
+                />
+                <p> Humity is {this.state.weather.main.humidity}%  and 
+                cloud is at rate of {this.state.weather.clouds.all}%</p>
                
               
                 <div className="country" key = {this.state.country.name} >
@@ -57,17 +63,19 @@ componentDidMount(){
                     </div>
                     <p>
                      Language(s): {this.state.country.languages.map((lang, i)=>(<span className="lang" key={i}>{(lang.name)}</span>))}
-                 </p>
-                 <p>
-                     Population: <span>{number.formatNumber(this.state.country.population)}</span>
-                 </p>
-                 <p>
-                     Currencies: {this.state.country.currencies.map((cur, i)=>(<span key={i}>{cur.name} - {cur.symbol}</span>))}
-                 </p>
-                 <p>Region: <span>{this.state.country.region}</span></p>
-                 {/* <p>
-                     Borders with: {this.state.country.borders.map((border, i)=>(<span className="border" key={i}>{border}</span>))}
-                 </p> */}
+                    </p>
+                    <p>
+                        Population: <span>{number.formatNumber(this.state.country.population)}</span>
+                    </p>
+                    <p>
+                        Currencies: {this.state.country.currencies.map((cur, i)=>(<span key={i}>{cur.name} - {cur.symbol}</span>))}
+                    </p>
+                    <p>Region: <span>{this.state.country.region}</span></p>
+                    
+                    <p>
+                        Borders with: {this.state.country.languages.map((border, i)=>(<span className="border" key={i}>{border.name}</span>))}
+                    </p>
+
                 </div>         
             </div>
         );

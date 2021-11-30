@@ -5,6 +5,7 @@ class Clock extends Component {
         super(props)
         this.state = this.getTime(); }
 
+
     componentDidMount(){
         setInterval(()=>{
           this.setState(this.getTime());
@@ -12,34 +13,33 @@ class Clock extends Component {
     }
     
     getTime(){
-        let now = new Date(); 
-        return {
-            day: now.getDate(),
-            month: now.getUTCMonth() + 1,
-          
-            year: now.getFullYear(),
-              hours: now.getHours(),
-              minutes: now.getMinutes(),
-              seconds: now.getSeconds(),
-              tenths: parseInt(now.getMilliseconds()/10),
-        };
+            let now = new Date(); 
+            return {
+                day: now.getDate(),
+                month: now.getUTCMonth() + 1,
+            
+                year: now.getFullYear(),
+                hours: now.getHours(),
+                minutes: now.getMinutes(),
+                seconds: now.getSeconds(),
+            };
         }
     render() {
         return (
             <div>
-              <p>  UTC +2 Time Zone</p>
+                <p>  UTC +2 Time Zone</p>
                 <div>
-        
+                
                     {this.state.day} {' - '}
                     {this.state.month} {' - '}
                     {this.state.year} {'  '}
                 </div>
              
-{/* 
-                ( {this.state.hours} {' : '}
-                 {this.state.minutes} {' : '}
-                 {this.state.seconds}{' . '}
-                 {this.state.tenths}) */}
+
+                    ( {this.state.hours} {' : '}
+                    {this.state.minutes} {' : '}
+                    {this.state.seconds}{' . '}
+                    )
             </div>
         );
     }

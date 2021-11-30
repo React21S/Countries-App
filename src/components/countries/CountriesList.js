@@ -3,7 +3,6 @@ import axios from "axios";
 import React, { Component } from 'react';
 import CountriesCard from "./CountriesCard";
 
-
 class CountriesList extends Component {
    
     state ={
@@ -25,7 +24,6 @@ class CountriesList extends Component {
         console.log(this.state.searchInput);
       };
         
-
       render() {
        if(this.state.isLoading){
          return <div className="lds-dual-ring"></div>
@@ -63,7 +61,7 @@ class CountriesList extends Component {
         );
       }
       }
-    }
+}
 
 
 export default CountriesList;
