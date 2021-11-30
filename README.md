@@ -2,7 +2,11 @@
 ![List-of-countries-screenshot](/img/Front.png)
 
 ---
+### About the list of the country
+-   User can read more about each country 
+![List-of-countries-screenshot](/img/About.png)
 
+---
 ### List of countries
 - The program is done with ReactJS [router, class component] and Axios as third parties for fetching data.
 - Each card displays each country's name, capital population, currencies, region, and country borders.
