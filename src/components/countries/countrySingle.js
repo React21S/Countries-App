@@ -25,8 +25,6 @@ componentDidMount(){
         getWeather(this.props.params.name)
     ]).then((res) => {
     this.setState ({country:res[0].data[0], weather:res[1].data, isLoading: false,});
-    console.log("country", this.state.country)
-    console.log("weather", this.state.weather)
   });
  
 }
