@@ -14,7 +14,6 @@ class CountriesList extends Component {
      
       componentDidMount(){
         axios.get('https://restcountries.com/v2/all?fields=name,capital,currencies,population,flags,region,languages,borders').then((res) => {this.setState({data: res.data, isLoading:false})
-        console.log(this.state.data);
       });
       };
       
