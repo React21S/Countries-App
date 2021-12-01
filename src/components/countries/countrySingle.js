@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import number from "easy-number-formatter";
+import {Link} from "react-router-dom"
 
 
 function getCountry(capital) {
@@ -73,7 +74,7 @@ componentDidMount(){
                     <p>
                         Borders with: {this.state.country.languages.map((border, i)=>(<span className="border" key={i}>{border.name}</span>))}
                     </p>
-
+                    <Link to="/countries"> Back to countries lists</Link>
                 </div>         
             </div>
         );

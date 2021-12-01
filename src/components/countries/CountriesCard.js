@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 const CountriesCard = (props) => {
     const{name, capital, languages, population, borders, currencies, flags, region} = props
     return (
-        <Link to={capital}>
+       
            
            <div className="country" key = {name} >
             
@@ -28,11 +28,11 @@ const CountriesCard = (props) => {
                      Borders with: {borders.map((border, i)=>(<span className="border" key={i}>{border}</span>))}
                  </p>
 
-
+                 <Link to={capital}> Click here to get weather</Link>
            </div>
             
             
-        </Link>
+           
     );
 };
 
