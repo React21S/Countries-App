@@ -13,21 +13,13 @@
     border-radius: 5px;
 } 
 
-<<<<<<< HEAD
- .country p,  .country h2 { 
-=======
 .country p,  .country h2 { 
->>>>>>> main
     margin-left: 20px;
     padding:10px ;
     color: var(--black);
 }
   
-<<<<<<< HEAD
- .country h2{
-=======
 .country h2{
->>>>>>> main
     padding-top: 50px;
 }
 .countries{

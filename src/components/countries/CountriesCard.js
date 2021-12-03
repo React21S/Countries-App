@@ -28,11 +28,7 @@ const CountriesCard = (props) => {
                      Borders with: {borders.map((border, i)=>(<span className="border" key={i}>{border}</span>))}
                  </p>
 
-<<<<<<< HEAD
-                 <Link to={capital}> Click here to get weather </Link>
-=======
                  <Link to={capital}> Click here to get weather</Link>
->>>>>>> main
            </div>
             
             

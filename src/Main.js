@@ -15,11 +15,7 @@ const RouterWrapper =(props)=>{
 const Main = () => {
     return (
        <Routes>
-<<<<<<< HEAD:src/components/Main.js
-            <Route path = "/" element={<Home/>}/>
-=======
             <Route path="/" element={<Home/>}/>
->>>>>>> main:src/Main.js
             <Route  path = "/about"  element={<About/>}/>
             <Route  path = "/countries"  element={<CountriesList/>}/>
             <Route path = "/countries/:name" element ={<RouterWrapper/>}/>
