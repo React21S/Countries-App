@@ -29,3 +29,24 @@
 ### Single country details
 -   When the user clicks on each country card, it displays the weather condition of the capital. 
 ![Search-by-option-screenshot](/img/SingleCountry.png)
+
+---
+# Form application built with ReactJS program to post information to database
+
+## Form Application format
+![Screenshot](/img/Front_F.png)
+
+---
+## Cloud Firestore database before post information 
+![Screenshot](/img/Firestore.png)
+
+---
+## Filled form before send to database
+![Screenshot](/img/Filled-form.png)
+
+---
+
+## Result from React program into database
+![Screenshot](/img/Result_F.png)
+
+---

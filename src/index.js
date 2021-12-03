@@ -7,6 +7,7 @@ import "./styles/isLoading.css";
 import "./styles/home-about.css";
 import "./styles/CountrySingle.css";
 import App from './App';
+import "./form/App_F.css"
 
 
 ReactDOM.render(<App />,document.getElementById('root')
