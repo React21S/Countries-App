@@ -26,6 +26,14 @@
  --accent-4: #92cfc7;
  --accent-5: #d7f2ef;
 
+  /* melon */
+  --ml-1:#e8a598;
+  --ml-2:#ffb5a7;
+  --ml-3:#fec5bb;
+  --ml-4:#fcd5ce;
+  --ml-5:#fae1dd;
+  --ml-6:#f8edeb;
+
 
   --font-1: 'Caveat', cursive;
   --font-2:'Roboto', sans-serif;
@@ -38,89 +46,53 @@
 
 
 body .App_F  {
-  background-color: var(--accent-3);
+  background-color: var(--ml-2);
   font-family: var(--font-2);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.App_F header{
-  padding: 30px;
-  text-align: center;
-  font-size: 40px;
-  background-color: var(--accent-1);
-  color: var(--white);
-  width: 100%;
-  text-transform: uppercase;
-
-}
 
 .App_F input,
-.App_F select {
-  padding: 20px;
+.App_F select, .App_F textarea {
+  padding: 15px;
   border-radius: 5px;
   outline: none;
+  border: none;
   font-size: 20px;
   width: 500px;
   margin-top: 20px;
   font-family: var(--font-2);
   background-color: var(--color-3);
 }
+
 .App_F label {
   display: inline-block;
   width: 20%;
-  font-size: 40px;
+  font-size: 30px;
   margin-left: 10px;
   text-align: left;
-  
 }
 .App_F button{
-  background-color: var(--bg-color-1);
+  background-color: var(--ml-1);
   color:var(--white);
   border: none;
   border-radius: 5px;
   box-shadow: 0 0 5px var(--color-4);
   padding: 1rem;
-  width: 15%;
-  margin: 20px;
+  margin: 10px;
   font-size: 20px;
-  margin-top: 2rem;
   text-transform: uppercase;
 }
 
 .App_F{
-  background-color: var(--accent-3);
   text-align: center;
   justify-content: center;
-  box-shadow: 0px 0px 5px var(--color-2);
-  border: none;
-  border-radius: 16px;
+  margin: 50px auto;
 }
 
 
-
-
-
-.App_F .result{
-  border: 2px solid var(--bg-color-5);
-  justify-content: center;
-}
   
 
-.App_F .data h1{
-  padding: 1rem 0;
-  font-size: 30px;
-  margin: 20px;
-}
 
-.App_F .data{
-  margin-left: 600px ;
- text-align: left;
-  border-radius: 10px;
-}
-
-.App_F .data h1 span{
-  margin: 100px;
-  font-size: 1.5rem;
-} 
 
 

@@ -1,125 +1,82 @@
-
 import './App_F.css';
-import Header from "./components/Header_F";
-
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import {db} from "./firebase.config-2";
-import {collection, doc, deleteDoc,addDoc,updateDoc,getDocs} from "firebase/firestore"
+import {collection, addDoc} from "firebase/firestore"
 
-function App() {
-
-  const [users, setUsers] = useState([]);
+function AppF() {
   const [firstName, setFirstName]= useState("");
   const [lastName, setLastName]= useState("");
   const [Address, setAddress]= useState("");
   const [postCode, setPostCode]= useState("");
   const [phone, setPhone]= useState("");
   const [Email, setEmail]= useState("");
-  const [newAge, setNewAge]= useState(0);
-
-  const usersCollectionRef = collection(db,"users");
+  const [message, setMessage]= useState("");
+  
+  const usersCollectionRef = collection(db,"users_2");
 
 // Create new users function 
   const createUser = async()=>{
-    await addDoc(usersCollectionRef, {firstName:firstName, lastName:lastName, Address:Address, postCode:Number(postCode), phone:phone, Email:Email,age:Number(newAge)});
+    await addDoc(usersCollectionRef, {firstName:firstName, lastName:lastName, Address:Address, postCode:Number(postCode), phone:phone, Email:Email, message:message});
   }
 
-  // Create update users function
-  const updateUser = async (id, age) => {
-      const userDoc = doc(db, "users", id);
-      const newFields = { age: age + 1 };
-      await updateDoc(userDoc, newFields);
-  };
 
-  // Create delete users function 
-   const deleteUser = async (id) => {
-      const userDoc = doc(db, "users", id);
-      await deleteDoc(userDoc);
-    };
-
-
-    // use effect function 
-  useEffect(()=>{
-    const getUsers = async ()=>{
-     const data = await getDocs(usersCollectionRef);
-     setUsers(data.docs.map((doc)=>({ ...doc.data(), id: doc.id})));
-    };
-    getUsers();
-  }, []);
+  const popUpHandler = (ev)=>{
+    ev.preventDefault();
+    
+  }
   
   return (
-    <div className="App_F">
-   
-        <Header/>
+    <div className="App_F" submit={popUpHandler}>
       {/*input new  users function  */}
       <div>
         <label htmlFor="firstName"> First Name</label>
-        <input name="" placeholder="First Name..." onChange={(event)=>{
+        <input id="firstName" name="firstName" placeholder="First Name..." required  onChange={(event)=>{
           setFirstName(event.target.value)
         }}/>
       </div>
       <div>
          <label htmlFor="lastName"> Last Name</label>
-         <input name="lastName"placeholder="Last Name..." onChange={(event)=>{
+         <input id="lastName" name="lastName" placeholder="Last Name..." required  onChange={(event)=>{
           setLastName(event.target.value)
         }}/>
       </div>
       <div>
         <label htmlFor="address">Address</label>
-          <input name="address" placeholder="Address..." onChange={(event)=>{
+          <input id="address" name="address" placeholder="Address..." required  onChange={(event)=>{
           setAddress(event.target.value)
         }}/>
       </div>
       <div>
         <label htmlFor="postcode"> Post Code</label>
-         <input type="number" name="postcode" placeholder="Post code..." onChange={(event)=>{
+         <input type="number" id="postcode" name="postcode" placeholder="Post code..." required  onChange={(event)=>{
           setPostCode(event.target.value)
         }}/>
       </div>
       <div>
         <label htmlFor="phoneNumber"> Phone Number</label>
-          <input name="phoneNumber" placeholder="Phone number..." onChange={(event)=>{
+          <input id="phoneNumber" name="phoneNumber" placeholder="Phone number..." required  onChange={(event)=>{
           setPhone(event.target.value)
         }}/>
       </div>
       <div>
         <label htmlFor="Email"> Email</label>
-          <input name="Email" placeholder="Email..." onChange={(event)=>{
+          <input id="Email" name="Email" placeholder="Email..." required  onChange={(event)=>{
           setEmail(event.target.value)
         }}/>
       </div>
+
       <div>
-        <label htmlFor="age">Age</label>
-        <input type="number"name="age" placeholder="Age..."  onChange={(event)=>{
-          setNewAge(event.target.value)
-        }}/>
+        <label htmlFor="message"> Message</label>
+          <textarea  id="message" name="message" placeholder="write your message here..." onChange={(event)=>{
+          setMessage(event.target.value)
+        }}></textarea>
       </div>
       
 
-        <button onClick={createUser}>create-User</button>
-        {users.map((user)=>{return <div className="result">
-          {" "}
-          <div className="data"> 
-          <h1>First Name: <span>{user.firstName} </span></h1>
-          <h1>Last Name: <span>{user.lastName} </span></h1>
-          <h1>Address: <span>{user.Address}</span> </h1>
-          <h1>Post Code:<span> {user.postCode}</span> </h1>
-          <h1>Phone Number:<span> {user.phone} </span></h1>
-          <h1>Email: <span>{user.Email} </span></h1>
-          <h1>Age:<span> {user.age} </span></h1>
-       
-          </div>
-
-          {/* update users button   */} 
-        <button onClick={() => { updateUser(user.id, user.age,user.Address,user.postCode, user.phone, user.Email );}}>{" "}Increase Age</button>
-
-            {/* delete users button   */} 
-        <button onClick={() => {deleteUser(user.id);}}>{" "}Delete User</button>
-
-   </div>})}
+      <button type="submit" value="Submit" onClick={createUser}>submit</button>
 
     </div>
   );
 }
 
-export default App;
+export default AppF;
