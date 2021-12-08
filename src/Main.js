@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import CountriesList from "./components/countries/CountriesList";
 import CountrySingle from "./components/countries/CountrySingle";
 import About from "./components/About";
-import App_F from "./form/App_F"
+import AppF from "./form/App_F"
 
 
 const RouterWrapper =(props)=>{
@@ -19,7 +19,7 @@ const Main = () => {
             <Route  path = "/about"  element={<About/>}/>
             <Route  path = "/countries"  element={<CountriesList/>}/>
             <Route path = "/countries/:name" element ={<RouterWrapper/>}/>
-            <Route  path = "/form"  element={<App_F/>}/>
+            <Route  path = "/form"  element={<AppF/>}/>
             
        </Routes>
     );

@@ -18,7 +18,7 @@ const Nav = () => {
               </li> 
 
               <li>
-                <NavLink className={(navData) => navData.isActive ? "active" : "" }  to="/form"> Form</NavLink> 
+                <NavLink className={(navData) => navData.isActive ? "active" : "" }  to="/form">Contact form</NavLink> 
               </li> 
             </ul>
         </nav>
