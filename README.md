@@ -1,12 +1,14 @@
 # List of countries built with ReactJS 
 - The code in this program describes how to fetch data with Axios, map the data and filter out the relevant data needed. 
     -   The home page displays the map of the world countries. 
+
 ![List-of-countries-screenshot](/img/Front.png)
 
 ---
 ### About the list of the country
 -   User can read more about each country 
      - The about page displays the information of what users can see when they click on the countries button. 
+
 ![List-of-countries-screenshot](/img/About.png)
 
 ---
@@ -19,6 +21,7 @@
 ### There are two search options to fetch any desired country
 -   First by type the name of country and
 -   Second by selection option.
+
 ![Search-by-option-screenshot](/img/search-by-option.png)
 
 ---
@@ -33,6 +36,7 @@
 -   When the user clicks on each country card, it displays the weather condition of the capital. 
     - Here users can see the current weather, humidity, and cloudy condition of the selected country. 
 By clicking on the back to countries list link, it navigates to the list of countries. 
+
 ![Search-by-option-screenshot](/img/SingleCountry.png)
 
 ---
@@ -40,6 +44,7 @@ By clicking on the back to countries list link, it navigates to the list of coun
 
 ## Form Application format
 - Users can send a message through the contact form to get more information if needed.
+
 ![Screenshot](/img/Front_F.png)
 
 ---
