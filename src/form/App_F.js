@@ -17,6 +17,7 @@ function AppF() {
 // Create new users function 
   const createUser = async()=>{
     await addDoc(usersCollectionRef, {firstName:firstName, lastName:lastName, Address:Address, postCode:Number(postCode), phone:phone, Email:Email, message:message});
+    window.location.reload();
   }
 
 
