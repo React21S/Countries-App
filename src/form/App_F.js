@@ -23,7 +23,7 @@ function AppF() {
 
   const popUpHandler = (ev)=>{
     ev.preventDefault();
-    
+    window.location.reload();
   }
   
   return (
