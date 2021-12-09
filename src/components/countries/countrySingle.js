@@ -74,7 +74,7 @@ componentDidMount(){
                     <p>
                         Borders with: {this.state.country.languages.map((border, i)=>(<span className="border" key={i}>{border.name}</span>))}
                     </p>
-                    <Link to="/countries"> Back to countries lists</Link>
+                    <Link to="/countries"> Back to list of countries </Link>
                 </div>         
             </div>
         );
