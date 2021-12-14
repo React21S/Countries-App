@@ -39,19 +39,6 @@ componentDidMount(){
 
         return (
             <div className="CountrySingle">
-                <p> 
-                    Weather situation now in {" "}
-                    <span className="city">{this.props.params.name}</span>
-                   is {" "}{this.state.weather.main.temp} °C 
-                </p>
-               
-                <img    src={`http://openweathermap.org/img/wn/${this.state.weather.weather[0].icon}@2x.png`} 
-                        alt={this.state.weather.weather[0].description}
-                />
-                <p> Humity is {this.state.weather.main.humidity}%  and 
-                cloud is at rate of {this.state.weather.clouds.all}%</p>
-               
-              
                 <div className="country" key = {this.state.country.name} >
             
                     <div className="cardTop">
@@ -74,6 +61,19 @@ componentDidMount(){
                     <p>
                         Borders with: {this.state.country.languages.map((border, i)=>(<span className="border" key={i}>{border.name}</span>))}
                     </p>
+                    <p> 
+                    Weather situation now in {" "}
+                    <span className="city">{this.props.params.name}</span>
+                   is {" "}{this.state.weather.main.temp} °C 
+                </p>
+                <p>
+                    <img    src={`http://openweathermap.org/img/wn/${this.state.weather.weather[0].icon}@2x.png`} 
+                        alt={this.state.weather.weather[0].description}/>
+                    </p>
+                    <p><strong>{this.state.weather.weather[0].description}</strong></p>
+                    <p>Humity is {this.state.weather.main.humidity}%</p>
+                    <p>cloud is at rate of {this.state.weather.clouds.all}%</p>
+                    
                     <Link to="/countries"> Back to list of countries </Link>
                 </div>         
             </div>

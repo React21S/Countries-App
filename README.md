@@ -37,7 +37,7 @@
     - Here users can see the current weather, humidity, and cloudy condition of the selected country. 
 By clicking on the back to countries list link, it navigates to the list of countries. 
 
-![Search-by-option-screenshot](/img/SingleCountry.png)
+![Search-by-Option-screenshot](/img/SingleCountry.png)
 
 ---
 # Form application built with ReactJS program to post information to database
