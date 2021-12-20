@@ -15,11 +15,11 @@ const RouterWrapper =(props)=>{
 const Main = () => {
     return (
        <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route  path = "/about"  element={<About/>}/>
-            <Route  path = "/countries"  element={<CountriesList/>}/>
-            <Route  path = "/countries/:name" element ={<RouterWrapper/>}/>
-            <Route exact strict path = "/form"  element={<AppF/>}/>
+            <Route exact path="/" element={<Home/>}/>
+            <Route exact  path = "/about"  element={<About/>}/>
+            <Route exact  path = "/countries"  element={<CountriesList/>}/>
+            <Route exact path = "/countries/:name" element ={<RouterWrapper/>}/>
+            <Route exact  path = "/form"  element={<AppF/>}/>
             
        </Routes>
     );
