@@ -9,9 +9,9 @@ import Main from './Main';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header/>
-      <Main/>
+      <Main basename={process.env.PUBLIC_URL}/>
       <Footer/>
     </BrowserRouter>
   );
