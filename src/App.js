@@ -9,7 +9,7 @@ import Main from './Main';
 
 const App = () => {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Header/>
       <Main/>
       <Footer/>
