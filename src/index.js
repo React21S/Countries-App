@@ -10,6 +10,5 @@ import App from './App';
 import "./form/App_F.css"
 
 
-ReactDOM.render(<App />,document.getElementById('root')
-);
+ReactDOM.render(< App />, document.getElementById('root'));
 

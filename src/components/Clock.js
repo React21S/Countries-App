@@ -28,18 +28,18 @@ class Clock extends Component {
         return (
             <div>
                 <p>  UTC +2 Time Zone</p>
-                <div>
+                <p>
                 
                     {this.state.day} {' - '}
                     {this.state.month} {' - '}
                     {this.state.year} {'  '}
-                </div>
-             
-
-                    ( {this.state.hours} {' : '}
+                </p>
+                <p>
+                ( {this.state.hours} {' : '}
                     {this.state.minutes} {' : '}
                     {this.state.seconds}{' . '}
                     )
+                </p>   
             </div>
         );
     }

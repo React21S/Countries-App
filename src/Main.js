@@ -18,8 +18,8 @@ const Main = () => {
             <Route path="/" element={<Home/>}/>
             <Route  path = "/about"  element={<About/>}/>
             <Route  path = "/countries"  element={<CountriesList/>}/>
-            <Route path = "/countries/:name" element ={<RouterWrapper/>}/>
-            <Route  path = "/form"  element={<AppF/>}/>
+            <Route  path = "/countries/:name" element ={<RouterWrapper/>}/>
+            <Route exact strict path = "/form"  element={<AppF/>}/>
             
        </Routes>
     );
