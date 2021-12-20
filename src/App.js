@@ -11,7 +11,7 @@ const App = () => {
   return (
     <HashRouter basename={process.env.PUBLIC_URL}>
       <Header/>
-      <Main basename={process.env.PUBLIC_URL}/>
+      <Main/>
       <Footer/>
     </HashRouter>
   );
