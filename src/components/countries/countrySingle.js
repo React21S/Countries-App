@@ -27,8 +27,9 @@ componentDidMount(){
     ]).then((res) => {
     this.setState ({country:res[0].data[0], weather:res[1].data, isLoading: false,});
   });
- 
+  
 }
+
 
     render() {
         if(this.state.isLoading){
@@ -73,7 +74,9 @@ componentDidMount(){
                     <p><strong>{this.state.weather.weather[0].description}</strong></p>
                     <p>Humity is {this.state.weather.main.humidity}%</p>
                     <p>cloud is at rate of {this.state.weather.clouds.all}%</p>
+                    <p>Time zone: {new Date(this.state.weather.dt *1000).toString()}</p>
                     
+
                     <Link to="/countries"> Back to list of countries </Link>
                 </div>         
             </div>

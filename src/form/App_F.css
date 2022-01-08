@@ -67,10 +67,9 @@ body .App_F  {
 
 .App_F label {
   display: inline-block;
-  width: 20%;
+  width: 200px;
   font-size: 30px;
   margin-left: 10px;
-  text-align: left;
 }
 .App_F button{
   background-color: var(--ml-1);
@@ -90,6 +89,29 @@ body .App_F  {
   margin: 50px auto;
 }
 
+
+@media screen and (max-width:568px) {
+  .App_F{
+    margin:2px ;
+    padding: 0;
+  }
+  .App_F label {
+    display:flex;
+    margin-top: 0;
+    float:left;
+    font-size: 15px;
+    margin-bottom: 0;
+    margin-left:-10px ;
+  }
+  .App_F input,
+.App_F select, .App_F textarea {
+  margin-bottom: 0;
+  padding: 5px;
+  font-size: 20px;
+  width: 300px;
+  margin-top: 0;
+}
+}
 
   
 

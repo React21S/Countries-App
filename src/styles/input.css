@@ -1,15 +1,28 @@
 /* ####### Input ####### */
-.countries input, select
+.countries input
 {
   padding: 20px;
   border-radius: 10px;
   outline: none;
   font-size: 20px;
-  width: 60%;
+  width: 100%;
   font-family: var(--font-2);
   border-width: 10px;
   border-color:var(--ml-2);
-  margin: 0 50px;
+  margin: 0 10px;
+
+}
+ .countries select
+{
+  padding: 20px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 20px;
+  width: 50%;
+  font-family: var(--font-2);
+  border-width: 10px;
+  border-color:var(--ml-2);
+  margin: 0 10px;
 
 }
 label {
@@ -21,11 +34,10 @@ label {
 }
 .search{
   text-align: center;
-  width: 100vw;
+  width: 100%;
 }
 
 select
 {
-    width: 30%;
     text-align: center;
 }

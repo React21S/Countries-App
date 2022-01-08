@@ -9,7 +9,7 @@
  .country{
     margin: 20px;
     box-shadow: 0 3px 8px 7px var(--white-2), 0 6px 20px 0 ;
-    width: 500px;
+    width: 350px;
     border-radius: 5px;
 } 
 
@@ -36,11 +36,11 @@
 }
 span{
     font-weight:bolder;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 
 .lang, .border{
-   font-size: 20px;
+   font-size: 15px;
 }
 
 .country a{
