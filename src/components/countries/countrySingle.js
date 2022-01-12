@@ -72,7 +72,7 @@ componentDidMount(){
                         alt={this.state.weather.weather[0].description}/>
                     </p>
                     <p><strong>{this.state.weather.weather[0].description}</strong></p>
-                    <p>Humity is {this.state.weather.main.humidity}%</p>
+                    <p>Humidity is {this.state.weather.main.humidity}%</p>
                     <p>cloud is at rate of {this.state.weather.clouds.all}%</p>
                     <p>Time zone: {new Date(this.state.weather.dt *1000).toString()}</p>
                     
