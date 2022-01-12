@@ -16,7 +16,7 @@ const Footer = () => {
                         </a>
 
                         <a href="https://github.com/FemiAdesola" target="_blank" rel="noreferrer" className="github">
-                            <i className="fab fa-github fa-2x"></i>
+                            <i className="fab fa-github fa-3x"></i>
                         </a>
                     </div>
                    
